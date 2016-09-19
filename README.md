@@ -41,7 +41,7 @@ oib.validate('24076340234');
 
 ### `validate(1)`
 
-This will validate agains the full specification of the standard. It accepts both `string` and `number`. It return `true` or `false`.
+This will validate against the full specification of the standard. It accepts both `string` and `number`. It returns `true` or `false`.
 
 ```JavaScript
 oib.validate('24076340234');
@@ -50,7 +50,7 @@ oib.validate(24076340234);
 
 ### `iso7064(1)`
 
-This validates only agains ISO 7064 standard. It accepts both `string` and `number`. It return `true` or `false`.
+This validates only against ISO 7064 standard. It accepts both `string` and `number`. It returns `true` or `false`.
 
 ```JavaScript
 oib.iso7064('24076340234');
