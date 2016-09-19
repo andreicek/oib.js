@@ -1,0 +1,32 @@
+{
+  "name": "oib.js",
+  "version": "1.0.0",
+  "description": "OIB validator",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "start": "jest --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andreicek/oib.js.git"
+  },
+  "keywords": [
+    "oib",
+    "oib.js",
+    "osobni",
+    "identifikacijski",
+    "broj"
+  ],
+  "author": "Andrei Zvonimir Crnkovic <andrei@infinum.co>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/andreicek/oib.js/issues"
+  },
+  "homepage": "https://github.com/andreicek/oib.js#readme",
+  "devDependencies": {
+    "babel-eslint": "^6.1.2",
+    "eslint": "^3.5.0",
+    "jest": "^15.1.1"
+  }
+}
