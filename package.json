@@ -4,6 +4,8 @@
   "description": "OIB validator",
   "main": "index.js",
   "scripts": {
+    "__eslint": "eslint index.js",
+    "precommit": "npm run __eslint && npm run test",
     "test": "jest",
     "start": "jest --watch"
   },
@@ -27,6 +29,7 @@
   "devDependencies": {
     "babel-eslint": "^6.1.2",
     "eslint": "^3.5.0",
+    "husky": "^0.11.7",
     "jest": "^15.1.1"
   }
 }
