@@ -5,7 +5,7 @@ OIB.js - Simple OIB validation
 
 ## What is OIB?
 
-OIB is _Osobni identifikacijski broj_ (eng. Personal identification number); a uniq numerical identificator of companies and people in Republic of Craotia. It's in use since 2009.
+OIB is _Osobni identifikacijski broj_ (eng. Personal identification number); a uniq numerical identificator of companies and people in Republic of Croatia. It's in use since 2009.
 
 ## Usage
 
@@ -50,7 +50,7 @@ oib.validate(24076340234);
 
 ### `iso7064(1)`
 
-This validates only against ISO 7064 standard. It accepts both `string` and `number`. It returns `true` or `false`.
+This validates only against ISO 7064 standard (it just exposes the ISO 7064 algorithm). It accepts both `string` and `number`. It returns `true` or `false`.
 
 ```JavaScript
 oib.iso7064('24076340234');
