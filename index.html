@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
+
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <title>Oib.js by andreicek</title>
+  </head>
+
+  <body>
+    <header>
+      <div class="inner">
+        <h1>Oib.js</h1>
+        <h2>OIB validator</h2>
+        <a href="https://github.com/andreicek/oib.js" class="button"><small>View project on</small> GitHub</a>
+      </div>
+    </header>
+
+    <div id="content-wrapper">
+      <div class="inner clearfix">
+        <section id="main-content">
+          <h1>
+<a id="oibjs---simple-oib-validation" class="anchor" href="#oibjs---simple-oib-validation" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>OIB.js - Simple OIB validation</h1>
+
+<p><a href="https://semaphoreci.com/andreicek/oib-js"><img src="https://semaphoreci.com/api/v1/andreicek/oib-js/branches/master/badge.svg" alt="Build Status"></a></p>
+
+<h2>
+<a id="what-is-oib" class="anchor" href="#what-is-oib" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>What is OIB?</h2>
+
+<p>OIB is <em>Osobni identifikacijski broj</em> (eng. Personal identification number); a uniq numerical identificator of companies and people in Republic of Craotia. It's in use since 2009.</p>
+
+<h2>
+<a id="usage" class="anchor" href="#usage" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Usage</h2>
+
+<p>Install it with npm:</p>
+
+<div class="highlight highlight-source-shell"><pre>npm install --save oib.js</pre></div>
+
+<p>And use it like:</p>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-k">const</span> <span class="pl-c1">oib</span> <span class="pl-k">=</span> <span class="pl-c1">require</span>(<span class="pl-s"><span class="pl-pds">'</span>oib.js<span class="pl-pds">'</span></span>);
+
+<span class="pl-smi">oib</span>.<span class="pl-en">validate</span>(<span class="pl-s"><span class="pl-pds">'</span>24076340234<span class="pl-pds">'</span></span>);</pre></div>
+
+<hr>
+
+<p>Or include it in your HTML (1995 style):</p>
+
+<div class="highlight highlight-text-html-basic"><pre>&lt;<span class="pl-ent">script</span> <span class="pl-e">src</span>=<span class="pl-s"><span class="pl-pds">"</span>https://unpkg.com/oib.js<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">script</span>&gt;</pre></div>
+
+<p>And use it like:</p>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-smi">oib</span>.<span class="pl-en">validate</span>(<span class="pl-s"><span class="pl-pds">'</span>24076340234<span class="pl-pds">'</span></span>);</pre></div>
+
+<h2>
+<a id="methods" class="anchor" href="#methods" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Methods</h2>
+
+<h3>
+<a id="validate1" class="anchor" href="#validate1" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a><code>validate(1)</code>
+</h3>
+
+<p>This will validate agains the full specification of the standard. It accepts both <code>string</code> and <code>number</code>. It return <code>true</code> or <code>false</code>.</p>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-smi">oib</span>.<span class="pl-en">validate</span>(<span class="pl-s"><span class="pl-pds">'</span>24076340234<span class="pl-pds">'</span></span>);
+<span class="pl-smi">oib</span>.<span class="pl-en">validate</span>(<span class="pl-c1">24076340234</span>);</pre></div>
+
+<h3>
+<a id="iso70641" class="anchor" href="#iso70641" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a><code>iso7064(1)</code>
+</h3>
+
+<p>This validates only agains ISO 7064 standard. It accepts both <code>string</code> and <code>number</code>. It return <code>true</code> or <code>false</code>.</p>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-smi">oib</span>.<span class="pl-en">iso7064</span>(<span class="pl-s"><span class="pl-pds">'</span>24076340234<span class="pl-pds">'</span></span>);
+<span class="pl-smi">oib</span>.<span class="pl-en">iso7064</span>(<span class="pl-c1">24076340234</span>);</pre></div>
+
+<h2>
+<a id="license" class="anchor" href="#license" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>License</h2>
+
+<p>Andrei Zvonimir Crnkovic <a href="mailto:andrei@infinum.co">andrei@infinum.co</a> MIT 2016.</p>
+        </section>
+
+        <aside id="sidebar">
+          <a href="https://github.com/andreicek/oib.js/zipball/master" class="button">
+            <small>Download</small>
+            .zip file
+          </a>
+          <a href="https://github.com/andreicek/oib.js/tarball/master" class="button">
+            <small>Download</small>
+            .tar.gz file
+          </a>
+
+          <p class="repo-owner"><a href="https://github.com/andreicek/oib.js"></a> is maintained by <a href="https://github.com/andreicek">andreicek</a>.</p>
+
+          <p>This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the Architect theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.</p>
+        </aside>
+      </div>
+    </div>
+
+  
+  </body>
+</html>
