@@ -2,26 +2,24 @@ var oib = (function() {
   'use strict'; // eslint-disable-line strict
 
   function __validateISO7064(oibArray) {
-    var controlDigit = oibArray[oibArray.length - 1];
-    var num = 10;
+    var controlDigit = oibArray.pop();
+    var value = oibArray.reduce(function(prev, next) {
+      var check = prev + next;
+      check %= 10;
 
-    oibArray.pop();
-    oibArray.forEach(function(prev) {
-      num += prev;
-      num %= 10;
-
-      if (num === 0) {
-        num = 10;
+      if (check === 0) {
+        check = 10;
       }
 
-      num *= 2;
-      num %= 11;
-      return num;
-    });
+      check *= 2;
+      check %= 11;
+      
+      return check;
+    }, 10);
 
-    var checkDigit = 11 - num === 10 ? 0 : 11 - num;
+    var checksum = (11 - value === 10) ? 0 : (11 - value);
 
-    return checkDigit === controlDigit;
+    return checksum === controlDigit;
   }
 
   function __stringToNumberArray(string) {
