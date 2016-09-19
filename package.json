@@ -6,6 +6,7 @@
   "scripts": {
     "__eslint": "eslint index.js",
     "precommit": "npm run __eslint && npm run test",
+    "prepublish": "npm run __eslint && npm run test",
     "test": "jest",
     "start": "jest --watch"
   },
